@@ -164,12 +164,6 @@
       "languageVersion": "2.12"
     },
     {
-      "name": "dbus",
-      "rootUri": "file:///Users/yhs5476/.pub-cache/hosted/pub.dev/dbus-0.7.11",
-      "packageUri": "lib/",
-      "languageVersion": "2.17"
-    },
-    {
       "name": "drift",
       "rootUri": "file:///Users/yhs5476/.pub-cache/hosted/pub.dev/drift-2.26.1",
       "packageUri": "lib/",
@@ -258,24 +252,6 @@
       "rootUri": "file:///Users/yhs5476/.pub-cache/hosted/pub.dev/flutter_lints-2.0.3",
       "packageUri": "lib/",
       "languageVersion": "2.19"
-    },
-    {
-      "name": "flutter_local_notifications",
-      "rootUri": "file:///Users/yhs5476/.pub-cache/hosted/pub.dev/flutter_local_notifications-15.1.3",
-      "packageUri": "lib/",
-      "languageVersion": "2.17"
-    },
-    {
-      "name": "flutter_local_notifications_linux",
-      "rootUri": "file:///Users/yhs5476/.pub-cache/hosted/pub.dev/flutter_local_notifications_linux-4.0.1",
-      "packageUri": "lib/",
-      "languageVersion": "2.17"
-    },
-    {
-      "name": "flutter_local_notifications_platform_interface",
-      "rootUri": "file:///Users/yhs5476/.pub-cache/hosted/pub.dev/flutter_local_notifications_platform_interface-7.2.0",
-      "packageUri": "lib/",
-      "languageVersion": "2.17"
     },
     {
       "name": "flutter_staggered_animations",
