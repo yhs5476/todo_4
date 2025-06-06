@@ -14,7 +14,6 @@ dependencies:
   cupertino_icons: ^1.0.2
   get_storage: ^2.0.3
   get: ^4.3.8
-  flutter_local_notifications: ^15.1.0+1
   intl: ^0.18.1
   google_fonts: ^5.1.0
   date_picker_timeline: ^1.2.3
