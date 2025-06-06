@@ -1,8 +1,10 @@
-# Flutter To-Do App
+# Flutter To-Do App [AI 융합학과 2023N2116 양희성]
 
 ## 프로젝트 개요
 
-본 애플리케이션은 Flutter 프레임워크를 기반으로 개발된 To-Do(할 일) 관리 앱입니다. GetX를 활용한 상태 관리와 모듈화된 서비스 구조를 통해 다양한 기능을 효과적으로 구현하였습니다. Firebase 인증, 로컬 데이터베이스(SQLite), SharedPreferences, GetStorage 등 다양한 기술을 통합하여 사용자에게 편리하고 풍부한 기능을 제공하며, 동적 테마 적용으로 사용자 경험을 향상시킵니다.
+본 애플리케이션은 Flutter 프레임워크를 기반으로 개발된 To-Do(할 일) 관리 앱입니다. GetX를 활용한 상태 관리와 모듈화된 서비스 구조를 통해 다양한 기능을 효과적으로 구현하였습니다. Firebase 인증, 로컬 데이터베이스(SQLite), SharedPreferences, GetStorage 등 다양한 기술을 통합하여 사용자에게 
+    데이터 부담이 없는 어플을 제작하였습니다. speech to text기능을 통해 녹음 이후 스크립트를 간편하게 작성
+    가능 합니다.
 
 ## 기술 스택
 
@@ -112,7 +114,7 @@
 ### 6. 스크립트 저장 기능
 
 *   **목표**: STT 생성 또는 직접 입력한 텍스트와 제목을 "스크립트"로 저장 및 관리.
-*   **주요 파일**: `controllers/script_controller.dart`, `models/script_model.dart`, (예상) `ui/pages/script_page.dart`.
+*   **주요 파일**: `controllers/script_controller.dart`, `models/script_model.dart`, `ui/pages/script_page.dart`.
 *   **구현 요약**:
     *   **데이터 모델 (`models/script_model.dart`)**:
         *   `Script` 클래스: `id` (String, UUID), `title`, `content`, `createdAt` 속성.
@@ -126,6 +128,8 @@
     *   **UI (예상: `ui/pages/script_page.dart`)**:
         *   `HomePage` 앱바 아이콘 통해 접근.
         *   스크립트 목록 표시, 새 스크립트 추가/조회/삭제 UI 제공.
+
+
 
 ### 7. 다크 모드 구현
 
