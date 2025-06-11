@@ -40,7 +40,7 @@
 #define HAVE_SYS_STAT_H 1
 #define HAVE_SYS_TIME_H 1
 #define HAVE_SYS_TYPES_H 1
-/* #undef HAVE_TCL */
+#define HAVE_TCL 1
 #define HAVE_UINT16_T 1
 #define HAVE_UINT32_T 1
 #define HAVE_UINT64_T 1

@@ -137,7 +137,7 @@ class TaskTile extends StatelessWidget {
               // 구분선 두께: 0.5
               width: 0.5,
               // 구분선 색상: 회색에 투명도 적용
-              color: Colors.grey[200]!.withOpacity(0.7),
+              color: Colors.grey[200]!.withValues(alpha: 0.7),
             ),
             // 할일 상태 표시 (완료 여부)
             RotatedBox(

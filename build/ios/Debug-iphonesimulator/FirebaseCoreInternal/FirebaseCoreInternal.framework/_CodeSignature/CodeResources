@@ -26,11 +26,11 @@
 		</data>
 		<key>Modules/FirebaseCoreInternal.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		HDPG6PphKDuLnZcdzpBz/AWPmDY=
+		l0oZUOz1lzRo8BSYgggeLLN/Unw=
 		</data>
 		<key>Modules/FirebaseCoreInternal.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		9tVN0m1f19iw9EXo2bffb1/QhPo=
+		wcbckPjB4VhIlz9WnlVb3xb0TiA=
 		</data>
 		<key>Modules/FirebaseCoreInternal.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -42,7 +42,7 @@
 		</data>
 		<key>Modules/FirebaseCoreInternal.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		PyS6wH7GJnETkCJB6msNIz8Nl8I=
+		BOD0uG4SnPa2dnoMyJdkjTZxrsw=
 		</data>
 		<key>Modules/FirebaseCoreInternal.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>Modules/FirebaseCoreInternal.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		ISNKqyez3Md5GdkQbhWV3JWVqGo=
+		phEq4cyI6EI7m9bKX7wwkv2taYs=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -95,14 +95,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			All/nDTwsWCncESPaqpe67SvSxOLBmWFT1bVQpx5Yxk=
+			Fl+/EQy5gtvPDNB2cbPBW3jPBkDkDEjbkWaZEgzw9Ms=
 			</data>
 		</dict>
 		<key>Modules/FirebaseCoreInternal.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			B5Vup/b8n7U3fG+H0a1iaEdA1w/f9Kt9OGDSd0bUB+k=
+			SJExopwTVsWkydAVk+PoYfAeI4hFAju4GTWV1LsOQxY=
 			</data>
 		</dict>
 		<key>Modules/FirebaseCoreInternal.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
@@ -123,7 +123,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			+zTrhdnv8TabOF4wfJPYF7WVLmIjZj/zsEP3sgJvjQA=
+			Bc1e4wM0kLPpPF2l9FG5A641FiII3Dyc2K6bi/m0tDM=
 			</data>
 		</dict>
 		<key>Modules/FirebaseCoreInternal.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
@@ -144,7 +144,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			jLbuEGYcDiSAI0Kb50y83Rm83WFrg8vxOrf0s7t1Xws=
+			u9lp06QoaEvJ26lZxWpVKm6KNmmvWl4DBj7rKJYCv4s=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

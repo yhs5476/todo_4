@@ -4,7 +4,7 @@ import 'package:firebase_auth/firebase_auth.dart'; // Firebase 사용자 인증
 import 'package:flutter/material.dart'; // 기본 Material 디자인
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart'; // 애니메이션 효과
 import 'package:flutter_svg/flutter_svg.dart'; // SVG 이미지 표시
-import 'package:get/get.dart'; // GetX 상태 관리 패키지
+import 'package:get/get.dart'; // GetX 상태 관리 및 라우팅 패키지
 import 'package:google_fonts/google_fonts.dart'; // 구글 폰트
 import 'package:intl/intl.dart'; // 날짜 및 시간 포맷팅
 import 'package:todo/services/auth_service.dart'; // 사용자 인증 서비스
@@ -48,8 +48,11 @@ class _HomePageState extends State<HomePage> {
 
     // 로그인되지 않았다면 로그인 화면으로 이동
     if (FirebaseAuth.instance.currentUser == null) {
+      // GetX 라우팅 시스템을 활용한 화면 전환
+      // Get.offAll(): 이전 화면들을 모두 제거하고 새 화면으로 대체 (뒤로가기 기록 삭제)
+      // transition: 화면 전환 애니메이션 지정 (페이드인 효과)
       Get.offAll(() => const LoginPage(),
-          transition: Transition.fadeIn); // 로그인 페이지로 강제 이동 (뒤로가기 기록 삭제)
+          transition: Transition.fadeIn);
     } else {
       // 로그인되어 있는 경우 사용자 정보 출력 (디버깅 용도)
       print("사용자 로그인됨: ${FirebaseAuth.instance.currentUser?.displayName}");
@@ -59,7 +62,9 @@ class _HomePageState extends State<HomePage> {
   // 현재 선택된 날짜 (기본값은 오늘)
   DateTime _selectedDate = DateTime.now();
 
-  // 할일 관리를 위한 컨트롤러 초기화 및 의존성 주입
+  // GetX의 의존성 주입(Dependency Injection)을 활용한 할일 관리 컨트롤러 초기화
+  // Get.put()은 TaskController 인스턴스를 생성하고 GetX 서비스 로케이터에 등록
+  // 이후 어디서든 Get.find<TaskController>() 또는 단순히 Get.find()로 접근 가능
   final TaskController _taskController = Get.put(TaskController());
 
   @override
@@ -321,15 +326,19 @@ class _HomePageState extends State<HomePage> {
   }
 
   // 할 일 목록 표시 메소드 - 선택된 날짜에 해당하는 할 일 목록을 보여줌
-  _showTasks() {
+  // 할 일 목록을 표시하는 위젯
+  Widget _showTasks() {
     return Expanded(
-      // Obx로 감싸서 _taskController의 상태 변화를 관찰하고 자동으로 UI 업데이트
+      // Obx: GetX의 반응형 상태 관리를 위한 위젯
+      // Obx 내부에서 사용되는 모든 Observable(.obs) 변수가 변경되면 UI가 자동으로 재구축됨
+      // 여기서는 _taskController.taskList가 변경될 때마다 리빌드
       child: Obx(() {
-        // 할 일 목록이 비어있는 경우 '할 일 없음' 메시지 표시
+        // _taskController.taskList는 RxList<Task> 형태의 Observable 변수
+        // GetX가 자동으로 이 변수의 변화를 추적하여 UI 업데이트
+        // 할 일 목록이 비어있는지 확인
         if (_taskController.taskList.isEmpty) {
           return _noTaskMsg();
         } else {
-          // 할 일 목록이 있는 경우 목록 표시
           return RefreshIndicator(
             // 당겨서 새로고침 기능 설정
             onRefresh: _onRefresh,
@@ -469,6 +478,8 @@ class _HomePageState extends State<HomePage> {
   // 할 일 항목 터치 시 바텀 시트 표시 메소드
   _showBottomSheet(BuildContext context, Task task) {
     // 분리된 TaskBottomSheet 위젯을 사용하여 바텀 시트 표시
+    // _taskController를 전달하여 TaskBottomSheet에서도 GetX 컨트롤러에 접근 가능
+    // 이 컨트롤러를 통해 작업을 삭제하거나 완료 상태로 변경 가능
     TaskBottomSheet.showBottomSheet(context, task, _taskController);
   }
 }
